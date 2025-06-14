@@ -12,6 +12,30 @@ private:
     int safeRevealed;
 
 public:
+ ScratchLottery() {
+        safeRevealed = 0;
+        generateBoard();
+    }
+
+    void generateBoard() {
+        srand(time(0));
+        for (int i = 0; i < 4; ++i)
+            for (int j = 0; j < 5; ++j) {
+                board[i][j] = '*';
+                revealed[i][j] = false;
+                data[i][j] = 0;
+            }
+
+        int bombsPlaced = 0;
+        while (bombsPlaced < 2) {
+            int r = rand() % 4;
+            int c = rand() % 5;
+            if (data[r][c] == 0) {
+                data[r][c] = 1;
+                bombsPlaced++;
+            }
+        }
+    }
 
 int main() {
     system ("clear");
