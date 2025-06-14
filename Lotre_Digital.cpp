@@ -37,6 +37,26 @@ public:
         }
     }
 
+ void displayBoard() {
+        for (int i = 0; i < 4; ++i) {
+            for (int j = 0; j < 5; ++j) {
+                cout << board[i][j] << ' ';
+            }
+            cout << endl;
+        }
+    }
+
+    bool guess(int row, int col) {
+        if (row < 0 || row >= 4 || col < 0 || col >= 5) {
+            cout << "Posisi tidak valid! Masukkan baris [0-3] dan kolom [0-4].\n";
+            return true;
+        }
+
+        if (revealed[row][col]) {
+            cout << "Kotak telah dibuka sebelumnya!\n";
+            return true;
+        }
+
 int main() {
     system ("clear");
     ScratchLottery game;
