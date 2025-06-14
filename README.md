@@ -10,6 +10,6 @@
 Program ini mensimulasikan permainan lotre gosok berbasis terminal, di mana pemain mencoba membuka kotak satu per satu tanpa mengenai bom. Jika pemain membuka semua kotak aman (tanpa bom), dia menang. 
 Jika membuka kotak yang mengandung bom, permainan berakhir (kalah).
 
-## Hasil Program :
+## Hasil Program : https://drive.google.com/drive/folders/1KKNX6xyE3p1kK9P70nDG5dKbA3K-o_8C?hl=ID
 
-## Link Youtube :
+## Link Youtube : https://youtu.be/N7GxNhsXtmg?si=Ti-UlPbkxxli2v-O
