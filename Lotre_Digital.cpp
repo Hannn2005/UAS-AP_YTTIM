@@ -56,6 +56,25 @@ public:
             cout << "Kotak telah dibuka sebelumnya!\n";
             return true;
         }
+        revealed[row][col] = true;
+        if (data[row][col] == 1) {
+            board[row][col] = 'X';
+            displayBoard();
+            cout << "BOOM! Anda menemukan bom! Permainan berakhir.\n";
+            return false;
+        } else {
+            board[row][col] = 'O';
+            safeRevealed++;
+            cout << "Kotak Aman\n";
+            displayBoard();
+            return true;
+        }
+    }
+
+    bool isGameOver() {
+        return safeRevealed == 18;
+    }
+};
 
 int main() {
     system ("clear");
